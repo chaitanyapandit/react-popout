@@ -148,8 +148,8 @@ export default class PopoutWindow extends React.Component {
     }
 
     popoutWindowUnloading() {
-        ReactDOM.unmountComponentAtNode(this.state.container);
         this.props.onClosing && this.props.onClosing();
+        ReactDOM.unmountComponentAtNode(this.state.container);
     }
 
     renderToContainer(container, popoutWindow, children) {
